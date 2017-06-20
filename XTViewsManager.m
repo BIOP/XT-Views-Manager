@@ -1,9 +1,6 @@
 %
 %
-%  Create New Spots Object from Average Distance of Closest Spots
-%  This XTension looks for spots closer than the given distances, removes
-%  them and adds a single spot object in its place whose center is the
-%  average distance of all spots that were found in that cluster
+%  A simple Imaris XTension to store and reload camera positions within Imaris
 %
 %
 %  By Olivier Burri @ EPFL BioImaging & Optics Platform
@@ -11,8 +8,11 @@
 %
 %
 %  Installation:
-%  - Copy this file into the XTensions folder in the Imaris installation directory.
-%  - You will find this function in the Image Processing Spots Functions menu
+%  - Copy the following files into the XTensions folder in the Imaris installation directory.
+%      - XTViewsManager.m
+%      - saveView.m
+%      - saveView.fig
+%  - You will find this function in the Image Processing > Camera Functions menu
 %
 %    <CustomTools>
 %      <Menu>
@@ -22,17 +22,10 @@
 %        </Item>
 %       </Submenu>
 %      </Menu>
-%      <SurpassTab>
-%        <SurpassComponent name="bpSpots">
-%          <Item name="Average Spots By Distance" icon="Matlab">
-%            <Command>MatlabXT::XTSpotsAverageByDistance(%i)</Command>
-%          </Item>
-%        </SurpassComponent>
-%      </SurpassTab>
 %    </CustomTools>
 %
 
-function XTViewManager(aImarisApplicationID, varargin)
+function XTViewsManager(aImarisApplicationID, varargin)
 
 % connect to Imaris interface
 if ~isa(aImarisApplicationID, 'Imaris.IApplicationPrxHelper')
