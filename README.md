@@ -14,10 +14,10 @@ After restarting Imaris, you should find the XTension in `Image Processing > Cam
 
 The user interface is fairly simple
 ## Buttons 
-- ** Save view ** Saves the current Imaris Camera position to an internal array and updates the list
-- ** Load Selected View ** Loads the view that was clicked upon by the user from the list
-- ** Delete View ** Deletes the currently selected view and renames all views so that the naming remains sequential
-- ** Import Views... ** Prompts the user for a `.mat` file which contains views saved using **Export Views...**
+- **Save View** Saves the current Imaris Camera position to an internal array and updates the list
+- **Load Selected View** Loads the view that was clicked upon by the user from the list
+- **Delete View** Deletes the currently selected view and renames all views so that the naming remains sequential
+- **Import Views...** Prompts the user for a `.mat` file which contains views saved using **Export Views...**
 - **Export Views...** Asks the user for a location to save a `.mat` file that contains all the views in the Views Manager.
 
 ## Reset Extents
