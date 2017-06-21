@@ -25,4 +25,7 @@ Some datasets in Imaris have the starting coordinates of their volumes set at va
 discrepancies when loading views from one image to another in the form of offsets.
 To avoid this, either make sure that the Extents always start at 0,0,0 through `Edit > Image Properties...` and set the `Min` row to all zeros.
 
-Alternatively you can activate this checkbox, but please note that this offset only affects the Volume and any spots/surfaces or other elements will be now offset from the volume.
+Alternatively you can activate this checkbox, but please note that this offset only affects the Volume and any spots/surfaces or other elements that were previously computed will be now offset from the volume. Make sure that the Extents are properly set before performing any kind of analysis in your data.
+
+# Comments, bugs
+Please use the **Issues** part of this GitHub Repository.
