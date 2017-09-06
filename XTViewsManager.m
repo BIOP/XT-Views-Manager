@@ -18,7 +18,7 @@
 %      <Menu>
 %       <Submenu name="Camera Functions">
 %        <Item name="Views Manager" icon="Matlab">
-%          <Command>MatlabXT::XTViewManager(%i)</Command>
+%          <Command>MatlabXT::XTViewsManager(%i)</Command>
 %        </Item>
 %       </Submenu>
 %      </Menu>
